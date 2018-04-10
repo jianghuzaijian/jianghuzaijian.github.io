@@ -34,7 +34,6 @@ Wodeqingdan.prototype.blogEventBind = function() {
   $(".blog-qr")
     .off("mouseenter")
     .on("mouseenter", function(b) {
-      sendLog("w1-1", ["official_website", "download_app", "wapindex"]);
       if (a) {
         clearTimeout(a);
       }

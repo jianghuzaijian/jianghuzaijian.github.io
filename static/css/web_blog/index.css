@@ -210,25 +210,28 @@ body {
     transform: translateZ(0);
 }
 
-.banner .banner-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    height: 138px;
-}
-
 .banner .logo {
     float: left;
-    margin-left: 36px;
-    width: 330px;
-    height: 185px;
-    background-image: url(/static/images/web_blog/logo_header.png);
-    background-repeat: no-repeat;
+}
+
+.banner .logo img {
+    width: 200px;
+}
+
+.banner .mark {
+    display: none;
+}
+
+.banner .buttons {
+    position: absolute;
+    right: 40px;
+    top: 30px;
 }
 
 .banner .write-button {
-    float: right;
+    float: left;
     position: relative;
-    margin: 42px 40px 0 0;
+    margin-right: 40px;
     -webiit-box-sizing: border-box;
     box-sizing: border-box;
     width: 132px;
@@ -254,7 +257,7 @@ body {
 
 .banner .blog-button {
     background-color: #C2B282;
-    color:#fff;
+    color: #fff;
 }
 
 .banner .blog-button:hover {
@@ -270,7 +273,7 @@ body {
     top: 76px;
     width: 350px;
     height: 180px;
-    background: #FFF url(/static/images/web_blog/blog_qr.png) no-repeat;
+    background: #FFF url(../../images/web_blog/blog_qr.png) no-repeat;
     background-position: 20px center;
     background-size: 150px 150px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
@@ -296,72 +299,56 @@ body {
     line-height: 42px;
     top: 65px;
     right: 22px;
-    color:#fff;
+    color: #fff;
     background-color: #333;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.banner .j-login {
-    margin: 42px 40px 42px 0;
-    width: 44px;
-    height: 44px;
-    float: right;
-    position: relative;
-}
-
-.banner .j-login .login {
-    display: block;
-    line-height: 44px;
-    font-size: 18px;
-    color: #444;
-    text-decoration: none;
-}
-
-.banner .j-login img {
-    width: 44px;
-    height: 44px;
-    border-radius: 22px;
-    overflow: hidden;
+@media(max-width: 775px) {
+    .banner {
+        position: relative;
+    }
+    .banner .banner-inner {}
+    .banner .logo img {
+        width: 140px;
+    }
+    .banner .mark {
+        position: absolute;
+        right: 10px;
+        top: 28px;
+        display: block;
+        font-size: 14px;
+        color: #666;
+    }
+    .banner .buttons {
+        position: relative;
+        top: -10px;
+        left: 0;
+        right: 0;
+        padding: 0 10px;
+    }
+    .banner .write-button {
+        width: 100%;
+        float: left;
+        margin: 0;
+        border-radius: 0;
+        border: 0 none;
+    }
+    .banner .blog-button {
+        background-color: #fafafa;
+        color: #C2B282;
+    }
 }
 
 .page {
-    position: relative;
-}
-
-.page1 {
     background: #fafafa;
-    padding-top: 138px;
 }
 
-.page1 img {
+.page img {
     display: block;
     margin: 0 auto;
-    max-width: 1280px;
-}
-
-.pageBack {
-    height: 800px;
-    background-image: url(/static/images/web_blog/blog_01.png);
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center center;
-}
-
-.page2 {
-    background-image: url(/static/images/web_blog/blog_02.png);
-}
-
-.page3 {
-    background-image: url(/static/images/web_blog/blog_03.png);
-}
-
-.page4 {
-    background-image: url(/static/images/web_blog/blog_04.png);
-}
-
-.page5 {
-    background-image: url(/static/images/web_blog/blog_05.png);
+    width: 100%;
 }
 
 .fullwidth {
@@ -376,19 +363,23 @@ body {
     overflow: hidden;
 }
 
-.bottom .logo {
+.bottom .logo img {
     width: 185px;
-    height: 169px;
-    background: url(/static/images/web_blog/bottom_logo.png) no-repeat;
     margin: 40px auto 0;
+}
+
+@media(max-width: 775px) {
+    .bottom .logo img {
+        width: 125px;
+    }
 }
 
 .bottom .description {
     font-size: 13px;
     color: #7F7F7F;
     line-height: 26px;
-    width: 620px;
-    margin: 20px auto 0;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .follow-block {
@@ -405,13 +396,13 @@ body {
     position: relative;
     width: 22px;
     height: 22px;
-    background: url(/static/images/web_blog/ctn_wechat.png) no-repeat;
+    background: url(../../images/web_blog/ctn_wechat.png) no-repeat;
     vertical-align: top;
     margin-left: 20px;
 }
 
 .follow-block .wechat:hover {
-    background: url(/static/images/web_blog/ctn_wechat_focus.png) no-repeat;
+    background: url(../../images/web_blog/ctn_wechat_focus.png) no-repeat;
 }
 
 .follow-block .wechat img {
@@ -494,7 +485,8 @@ body {
     margin-bottom: 10px;
     line-height: 1.5;
 }
-.m-layer .content .author{
+
+.m-layer .content .author {
     font-size: 12px;
     text-align: right;
 }
@@ -518,13 +510,13 @@ body {
     height: 59px;
     top: 0;
     right: 0;
-    background: url(/static/images/web_blog/close.png) no-repeat;
+    background: url(../../images/web_blog/close.png) no-repeat;
 }
 
 .m-layer .close:hover {
-    background: url(/static/images/web_blog/close.png) no-repeat;
+    background: url(../../images/web_blog/close.png) no-repeat;
 }
 
 .m-layer .close:active {
-    background: url(/static/images/web_blog/close.png) no-repeat;
+    background: url(../../images/web_blog/close.png) no-repeat;
 }
